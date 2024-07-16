@@ -1,0 +1,252 @@
+:root {
+    --font-body: 'Arial', sans-serif;
+    --font-header: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --color-background: url('images.jpeg');
+    --color-text: whitesmoke;
+    --color-header-text: white;
+    --color-link: blue;
+    --color-link-hover: #4c4eaf;
+    --color-link-hover-bg: aliceblue;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-img-shadow: rgba(0, 0, 0, 0.3);
+    --header-padding: 2rem 0;
+    --nav-padding: 1.5rem 0;
+    --container-padding: 3rem;
+    --element-margin-bottom: 3rem;
+    --text-shadow: 1px 1px 2px blue;
+    --box-shadow: 0 2px 5px var(--color-shadow);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-image: var(--color-background);
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: 3rem;
+}
+
+header {
+    text-align: center;
+    font-family: var(--font-header);
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: var(--header-padding);
+    color: var(--color-header-text);
+    margin-bottom: 2rem;
+}
+
+nav {
+    text-align: center;
+    padding: var(--nav-padding);
+    margin-bottom: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-link);
+    background-color: rgba(245, 245, 245, 0.695);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    text-shadow: var(--text-shadow);
+}
+
+.uni {
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uni p {
+    margin-bottom: 2rem;
+}
+
+.uni img {
+    padding: 2rem;
+    width: auto;
+    height: auto;
+}
+
+.uni-links {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.uni a {
+    padding: 1rem 0;
+    text-decoration: none;
+    background-color: var(--color-link);
+    color: rgba(245, 245, 245, 0.695);
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.link a {
+    transition: transform 0.3s ease;
+}
+
+.link a:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--container-padding);
+    margin-bottom: 3rem;
+}
+
+.certificate,
+.linkedin {
+    flex: 1;
+    margin: 0 var(--element-margin-bottom);
+    text-align: center;
+}
+
+.linkedin p,
+.certificate p {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.linkedin {
+    position: relative;
+    margin-bottom: var(--element-margin-bottom);
+}
+
+.linkedin a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+.linkedin img,
+.certificate img {
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.linkedin h5 {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-link-hover-bg);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--color-link-hover);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.skill-item {
+    flex: 1 0 200px;
+    max-width: 300px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 2.5rem;
+    color: var(--color-link);
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-item p {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.skill-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem var(--color-img-shadow);
+}
+
+.my p {
+    color: #4c4eaf;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer a:hover {
+    background-color: var(--color-link-hover-bg);
+    color: var(--color-link-hover);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .uni {
+        padding: 1.5rem;
+    }
+
+    .uni-links {
+        padding: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .certificate,
+    .linkedin {
+        margin: 1.5rem 0;
+    }
+}

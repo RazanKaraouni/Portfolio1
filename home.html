@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razan's Professional Portfolio</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+         <h1>My Professional Portfolio</h1>
+    </header>
+    
+    <nav>
+        <a href="javascript:void(0)" id="about-me-link">About Me</a>
+        <a href="#skills">My Skills</a>
+        <a href="#certificates">Certificates</a>
+    </nav>
+   
+    <div id="uni" class="uni">
+        <p>
+        Hello! I'm Razan Karaoni, a dedicated and ambitious computer science student. <br>
+        With a deep passion for technology and a relentless drive to succeed,<br>
+         I am determined to build a successful career as a <br>
+         My goal is to leverage my skills and knowledge to make a significant impact in the tech industry.</p>
+        <br>
+        <img src="download (7).jpeg" alt=""> 
+        <div class="link">
+            <a id="skills-link" href="javascript:void(0)">Check my skills!</a>&nbsp;
+            <a id="certificates-link" href="javascript:void(0)">Check my certificates!</a>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <div class="linkedin">
+                <p>Here's My LinkedIn Profile</p>
+                <a href="https://www.linkedin.com/in/razan-karaouni-9a7164296" target="_blank">
+                    <h5>Click here</h5>
+                    <img src="WhatsApp Image 2024-07-13 at 5.57.28 PM.jpeg" alt="LinkedIn Profile Image">
+                </a>
+            </div>
+
+            <div id="certificates" class="certificate">
+                <p>My certificates</p>
+                <img src="WhatsApp Image 2024-07-13 at 5.58.40 PM.jpeg" alt="Certificate Image">
+            </div>
+            <br>
+        </div>
+        <br>
+
+        <br>
+        <div id="skills" class="skills">
+            <br>
+            <div class="row">
+                <div class="skill-item">
+                    <p>C++</p>
+                    <img src="C++.jpeg" alt="C++ Logo">
+                </div>
+                <div class="skill-item">
+                    <p>Microsoft SQL</p>
+                    <img src="sql.jpeg" alt="SQL Logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="skill-item">
+                    <p>HTML</p>
+                    <img src="html.png" alt="HTML Logo">
+                </div>
+                <div class="skill-item">
+                    <p>CSS</p>
+                    <img src="css.jpeg" alt="CSS Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/razan-karaouni-9a7164296">LinkedIn</a>
+        <a href="https://github.com/RazanKaraouni?tab=repositories">GitHub</a>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aboutMeLink = document.getElementById('about-me-link');
+            const skillsLink = document.getElementById('skills-link');
+            const certificatesLink = document.getElementById('certificates-link');
+
+            aboutMeLink.addEventListener('click', () => {
+                document.getElementById('uni').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            skillsLink.addEventListener('click', () => {
+                document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            certificatesLink.addEventListener('click', () => {
+                document.getElementById('certificates').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            const skills = document.querySelectorAll('.skills p');
+            skills.forEach(skill => {
+                skill.addEventListener('click', () => {
+                    alert(`You clicked on ${skill.innerText}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
